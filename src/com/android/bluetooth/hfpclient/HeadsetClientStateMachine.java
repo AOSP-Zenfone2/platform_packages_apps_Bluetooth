@@ -453,7 +453,7 @@ final class HeadsetClientStateMachine extends StateMachine {
     private void updateCallSetupIndicator(int callsetup) {
         Log.d(TAG, "updateCallSetupIndicator " + callsetup + " " + mPendingAction.first);
 
-<<<<<<< HEAD
+
         if (mRingtone != null && mRingtone.isPlaying()) {
             Log.d(TAG,"stopping ring after no response");
             mRingtone.stop();
@@ -466,8 +466,6 @@ final class HeadsetClientStateMachine extends StateMachine {
             mAudioManager.abandonAudioFocusForCall();
         }
 
-=======
->>>>>>> f83a826702676cf17d9ed0a59264877773a36dfd
         if (waitForIndicators(-1, callsetup, -1)) {
             return;
         }
@@ -1014,7 +1012,7 @@ final class HeadsetClientStateMachine extends StateMachine {
         int action;
 
         Log.d(TAG, "rejectCall");
-<<<<<<< HEAD
+
         if ( mRingtone != null && mRingtone.isPlaying()) {
             Log.d(TAG,"stopping ring after call reject");
             mRingtone.stop();
@@ -1026,8 +1024,7 @@ final class HeadsetClientStateMachine extends StateMachine {
             // abandon audio focus after the mode has been set back to normal
             mAudioManager.abandonAudioFocusForCall();
         }
-=======
->>>>>>> f83a826702676cf17d9ed0a59264877773a36dfd
+
 
         BluetoothHeadsetClientCall c =
                 getCall(BluetoothHeadsetClientCall.CALL_STATE_INCOMING,

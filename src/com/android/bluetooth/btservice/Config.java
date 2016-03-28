@@ -97,13 +97,13 @@ public class Config {
         ArrayList<Class> profiles = new ArrayList<Class>(PROFILE_SERVICES.length);
         for (int i=0; i < PROFILE_SERVICES_FLAG.length; i++) {
             boolean supported = resources.getBoolean(PROFILE_SERVICES_FLAG[i]);
-<<<<<<< HEAD
+
             if (supported) {
                 if(!addAudioProfiles(PROFILE_SERVICES[i].getSimpleName()))
                     continue;
-=======
+
             if (supported && !isProfileDisabled(ctx, PROFILE_SERVICES[i])) {
->>>>>>> f83a826702676cf17d9ed0a59264877773a36dfd
+
                 Log.d(TAG, "Adding " + PROFILE_SERVICES[i].getSimpleName());
                 profiles.add(PROFILE_SERVICES[i]);
             }

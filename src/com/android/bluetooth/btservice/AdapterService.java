@@ -440,15 +440,15 @@ public class AdapterService extends Service {
 
         mSdpManager = SdpManager.init(this);
         registerReceiver(mAlarmBroadcastReceiver, new IntentFilter(ACTION_ALARM_WAKEUP));
-<<<<<<< HEAD
+
         setAdapterService(this);
 
 
 
-=======
+
         mProfileObserver = new ProfileObserver(getApplicationContext(), this, new Handler());
         mProfileObserver.start();
->>>>>>> f83a826702676cf17d9ed0a59264877773a36dfd
+
     }
 
     @Override
